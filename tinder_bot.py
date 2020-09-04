@@ -48,12 +48,13 @@ class Tinder_Bot():
 
         sleep(2)
 
+    def swipe_left(self):
+        heart_btn = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/div[4]/button')
+        heart_btn.click()
 
- #   def swipe_left(self):
-        #todo
-
-  #  def swipe_right(self):
-        #todo
+    def swipe_right(self):
+        x_btn = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/div[2]/button')
+        x_btn.click()
 
    # def run(self):
      #   while True:
@@ -74,3 +75,5 @@ class Tinder_Bot():
 
 bot = Tinder_Bot()
 bot.login_phone()
+
+
